@@ -1,0 +1,74 @@
+{
+  "name": "root",
+  "type": "directory",
+  "children": [
+    {
+      "name": "desktop",
+      "type": "directory",
+      "children": [
+        {
+          "name": "sobre-mim",
+          "type": "directory",
+          "children": [
+            {
+              "name": "perfil.txt",
+              "type": "file"
+            },
+            {
+              "name": "hobbies.txt",
+              "type": "file"
+            }
+          ]
+        },
+        {
+          "name": "formacao",
+          "type": "directory",
+          "children": [
+            {
+              "name": "educacao.txt",
+              "type": "file"
+            },
+            {
+              "name": "cursos.txt",
+              "type": "file"
+            },
+            {
+              "name": "idiomas.txt",
+              "type": "file"
+            }
+          ]
+        },
+        {
+          "name": "portfolio",
+          "type": "directory",
+          "children": [
+            {
+              "name": "otto-os.txt",
+              "type": "file"
+            },
+            {
+              "name": "declusor.txt",
+              "type": "file"
+            },
+            {
+              "name": "pydb.txt",
+              "type": "file"
+            },
+            {
+              "name": "goratchet.txt",
+              "type": "file"
+            },
+            {
+              "name": "demorganizer.txt",
+              "type": "file"
+            }
+          ]
+        },
+        {
+          "name": "README.txt",
+          "type": "file"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- SEO & Metadata -->
+    <title>otto OS - Othon's Web Page</title>
+    <meta name="description" content="Um simulador de Sistema Operacional de alto desempenho rodando no navegador. Arquitetura Kernel/User-land baseada em Web Workers e Shadow DOM." />
+    <meta name="keywords" content="Otto OS, Web OS, Retro, Simulation, Kernel, User-Land, Web Worker, VFS" />
+    <meta name="author" content="Otto OS Team" />
+
+    <style>
+      /**
+       * [Estilo Base] Otto OS Reset
+       * Define a área de pintura principal do sistema, garantindo ocupação integral da viewport
+       * e a estética clássica de desktops retrô (Teal #008080).
+       */
+      body,
+      html {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        font-family: 'Courier New', Courier, monospace;
+        background-color: #008080;
+      }
+
+      /**
+       * [Componente] Desktop Container
+       * Espaço reservado para o WindowCompositor e DesktopCompositor.
+       * A altura desconta a Taskbar fixa no rodapé.
+       */
+      #desktop-container {
+        position: relative;
+        width: 100%;
+        height: calc(100% - 30px);
+        background-color: #008080;
+      }
+
+      /**
+       * [Componente] Taskbar (Dock)
+       * Orquestrador de processos minimizados e botões de lançamento rápido.
+       * Implementa a estética Windows 95 (W95A).
+       */
+      .dock-toolbar {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 30px;
+        background: #c0c0c0;
+        border-top: 2px solid #fff;
+        box-shadow: inset 0 1px 0 #fff;
+        display: flex;
+        align-items: center;
+        gap: 4px;
+        padding: 0 4px;
+        z-index: 9999;
+        box-sizing: border-box;
+      }
+
+      .dock-item {
+        position: relative;
+        height: 22px;
+        background: #c0c0c0;
+        color: black;
+        border: 2px solid #fff;
+        border-right-color: #808080;
+        border-bottom-color: #808080;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        padding: 0 8px;
+        font-size: 11px;
+        font-weight: bold;
+      }
+
+      .dock-item:active,
+      .dock-item.active {
+        border: 2px solid #808080;
+        border-right-color: #fff;
+        border-bottom-color: #fff;
+        background: #dfdfdf;
+        padding-top: 2px;
+        padding-left: 10px;
+      }
+
+      /**
+       * [Componente] Desktop Grid
+       * Camada de exibição de ícones (Inodes) mapeados para o diretório /desktop.
+       */
+      .desktop-grid {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-content: flex-start;
+        gap: 10px;
+        z-index: 1;
+      }
+
+      .desktop-icon {
+        width: 70px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 4px;
+        cursor: pointer;
+        padding: 4px;
+        border: 1px solid transparent;
+      }
+
+      .desktop-icon:hover {
+        background: rgba(0, 0, 128, 0.2);
+        border: 1px dotted #fff;
+      }
+
+      .desktop-icon .icon {
+        font-size: 32px;
+      }
+
+      .desktop-icon .title {
+        color: white;
+        font-size: 11px;
+        text-align: center;
+        word-break: break-all;
+        background: transparent;
+      }
+    </style>
+    <script type="module" crossorigin src="/script.js"></script>
+  </head>
+
+  <body>
+    <!-- 
+      Otto OS Entrypoint (DOM Mounts)
+      Estes elementos são alvos passivos para os orquestradores da User-Land.
+    -->
+
+    <!-- Container principal de janelas e área de trabalho -->
+    <div id="desktop-container"></div>
+
+    <!-- Barra de gerenciamento de tarefas e status -->
+    <div class="dock-toolbar"></div>
+
+    <!-- 
+      User-Land Bootstrap
+      Carregamento do módulo principal que inicializa o Bridge IPC e os Compositores.
+    -->
+  </body>
+</html>

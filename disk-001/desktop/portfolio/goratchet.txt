@@ -1,0 +1,11 @@
+GORATCHET
+--------------------------------------------------
+Implementação em Go do algoritmo Double Ratchet
+
+- Segue a especificação do Signal Protocol.
+- Criptografia ponta-a-ponta com Forward Secrecy.
+- Zero dependências externas (apenas biblioteca padrão do Go).
+- Tratamento de mensagens e persistência de sessão.
+
+GitHub: github.com/othonhugo/goratchet
+--------------------------------------------------

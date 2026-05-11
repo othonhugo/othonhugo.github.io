@@ -1,0 +1,11 @@
+OTTO OS
+--------------------------------------------------
+Simulador de sistema operacional em Vanilla JS
+
+- Kernel performático (Web Worker).
+- Sistema de arquivos virtual (VFS) O(1) em IndexedDB.
+- Sandboxing com Shadow DOM para isolamento de apps.
+- API de segurança baseada em Capabilities.
+
+GitHub [WIP]: github.com/othonhugo/otto-os
+--------------------------------------------------

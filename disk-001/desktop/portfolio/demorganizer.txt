@@ -1,0 +1,11 @@
+DEMORGANIZER
+--------------------------------------------------
+Framework de álgebra booleana e visualização
+
+- Constrói árvores de expressões lógicas.
+- Sobrecarga de operadores Python (&, |, ^, ~).
+- Geração automatizada de tabelas verdade.
+- Design orientado a objetos para avaliação lógica.
+
+GitHub: github.com/othonhugo/demorganizer
+--------------------------------------------------

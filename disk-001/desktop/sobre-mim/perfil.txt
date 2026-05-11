@@ -1,0 +1,7 @@
+PERFIL PROFISSIONAL
+--------------------------------------------------
+Desenvolvedor Full Stack & Pesquisador de Segurança
+
+- Focado em arquitetura de sistemas, desenvolvimento web e segurança.
+- Experiência com Go, Python, TypeScript, C, e Bash.
+--------------------------------------------------

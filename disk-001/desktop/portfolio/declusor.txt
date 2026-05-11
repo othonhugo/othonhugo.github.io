@@ -1,0 +1,11 @@
+DECLUSOR
+--------------------------------------------------
+Ferramenta modular de entrega de payload e controle remoto
+
+- CLI interativa para testes de intrusão.
+- Autocompletar de comandos e caminhos.
+- Gestão unificada de sessões e transferência de arquivos.
+- Desenvolvido para pesquisadores de segurança e CTFs.
+
+GitHub: github.com/othonhugo/declusor
+--------------------------------------------------

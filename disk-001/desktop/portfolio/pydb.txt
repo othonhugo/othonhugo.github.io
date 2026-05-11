@@ -1,0 +1,11 @@
+PYDB
+--------------------------------------------------
+Motor de banco de dados construido do zero
+
+- Criado para desmistificar o funcionamento interno de SGBDs.
+- Motor de armazenamento customizado e controle de concorrência.
+- Implementação de indexação básica e processamento de queries.
+- Foco em operações de E/S e arquitetura de sistemas.
+
+GitHub: github.com/othonhugo/pydb
+--------------------------------------------------
